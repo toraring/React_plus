@@ -44,88 +44,53 @@ class MyPage extends React.Component {
     this.state = {
       tabs: 1,
       file : [],
-      previewURL : []
+      image : require("assets/img/smile.jpg")
     }
   }
 
   handleFileOnChange = (event) => {
     event.preventDefault();
-    if(this.state.previewURL.length >=1){
-      alert("사진은 한 장만 업로드 가능합니다.");
-      return;
-    }
     let reader = new FileReader();
     let file = event.target.files[0];
     reader.onloadend = () => {
       this.state.file.push(file)
-      this.state.previewURL.push(reader.result)
-      /*this.setState({
-        file : file,
-        previewURL : reader.result
-      })*/
-      console.log(this.state.previewURL)
-      this.forceUpdate()
+      
+      this.setState({image : reader.result});
     }
     reader.readAsDataURL(file);
   }
   state = {};
-  render() {
-      
-      }
-  
 
-  componentDidMount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      document.documentElement.className += " perfect-scrollbar-on";
-      document.documentElement.classList.remove("perfect-scrollbar-off");
-      let tables = document.querySelectorAll(".table-responsive");
-      for (let i = 0; i < tables.length; i++) {
-        ps = new PerfectScrollbar(tables[i]);
-      }
-    }
-    document.body.classList.toggle("mypage");
-  }
-  componentWillUnmount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      ps.destroy();
-      document.documentElement.className += " perfect-scrollbar-off";
-      document.documentElement.classList.remove("perfect-scrollbar-on");
-    }
-    document.body.classList.toggle("mypage");
-  }
-  toggleTabs = (e, stateName, index) => {
-    e.preventDefault();
-    this.setState({
-      [stateName]: index
-    });
-  };
   render() {
-    let profile_preview =[];
-      let i = 0;
-      for(let i=0 ;i<2;i++){
-        const element = this.state.previewURL[i];
-        profile_preview.push(<img style={{maxWidth:'200px'}}  src={element}></img>)
-      }
 
     return (
       <>
         <ExamplesNavbar4 />
         <div className="wrapper">
-            <div className="section">
-                <div className="container">
-                    <Row>
-                        <Col className="col-md-3">
-                          <div className="section">
-                            <section className="text-center">
-                              <div class="fileinput text-center">                              
-                                <div>
-                                  <button type="button" class="btn-round btn btn-default">Add Photo</button>
-                                  <input type="file"
-                                    accept='image/jpg,impge/png,image/jpeg,image/gif' 
-                                    name='profile_img' onChange={this.handleFileOnChange}/>
-                                  {profile_preview}
-                                </div>
-                              </div>
+           <div className="section">
+               <div className="container">
+                   <Row>
+                   <Col className="col-md-3">
+                    <div className="section">
+                        <section className="text-center">
+                            <div className="fileinput text-center">
+                                {/* <input type="file" accept='image/jpg,impge/png,image/jpeg,image/gif' 
+                                  name='profile_img' onChange={this.handleFileOnChange}/> */}
+                               
+                            <div className="thumbnail img-circle">
+                            <img src={this.state.image} alt="..."></img>
+                            </div>
+                            <div>
+                            <label type="button" for="ex_file" className="btn-round btn btn-default">
+                              
+                              Add Photo
+                              <input type="file" id="ex_file" style={{width:"0px",}} accept='image/jpg,impge/png,image/jpeg,image/gif' 
+                                  onChange={this.handleFileOnChange}/>
+                            </label>
+                                 
+                            </div>
+                            </div>
+
                                <h3 class="title">Charlie Bailey</h3>
                             </section>
                             <section>
