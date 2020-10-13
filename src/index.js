@@ -32,6 +32,7 @@ import ProfilePage3 from "views/examples/ProfilePage3.js";
 import ProductPage from "views/examples/ProductPage.js";
 import ProductPage2 from "views/examples/ProductPage2.js";
 import RegisterOld from "views/examples/RegisterOld.js";
+import MyPage from "views/examples/MyPage.js";
 
 
 ReactDOM.render(
@@ -65,6 +66,10 @@ ReactDOM.render(
       <Route
         path="/product-page2"
         render={props => <ProductPage2 {...props} />}
+      />
+      <Route
+        path="/mypage"
+        render={props => <MyPage {...props} />}
       />
       <Route
         path="/register-old"
