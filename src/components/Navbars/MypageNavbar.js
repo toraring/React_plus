@@ -33,7 +33,7 @@ import {
   UncontrolledCarousel
 } from "reactstrap";
 
-class PagesNavbar extends React.Component {
+class MypagesNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -250,4 +250,4 @@ class PagesNavbar extends React.Component {
   }
 }
 
-export default PagesNavbar;
+export default MypagesNavbar;

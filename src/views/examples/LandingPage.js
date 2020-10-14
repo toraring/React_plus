@@ -162,7 +162,7 @@ class RegisterPage extends React.Component {
                   />
                 </Col>
               </Row>
-        <Row>
+              <Row>
                 <Col className="item"><hr style={{width: '100%', color: "white", backgroundColor:"white", height: 2, Align: "center"}}/>
                   <div button class="btn-simple btn btn-success" style={{float: 'right'}}>
                     <Link to="register-old"> 

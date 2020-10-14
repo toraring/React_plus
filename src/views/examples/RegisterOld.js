@@ -33,7 +33,41 @@ import {
 
 
 class RegisterOld extends React.Component {
-  
+  state = {
+    squares1to6: "",
+    squares7and8: ""
+  };
+  componentDidMount() {
+    document.body.classList.toggle("register-page");
+    document.documentElement.addEventListener("mousemove", this.followCursor);
+  }
+  componentWillUnmount() {
+    document.body.classList.toggle("register-page");
+    document.documentElement.removeEventListener(
+      "mousemove",
+      this.followCursor
+    );
+  }
+  followCursor = event => {
+    let posX = event.clientX - window.innerWidth / 2;
+    let posY = event.clientY - window.innerWidth / 6;
+    this.setState({
+      squares1to6:
+        "perspective(500px) rotateY(" +
+        posX * 0.05 +
+        "deg) rotateX(" +
+        posY * -0.05 +
+        "deg)",
+      squares7and8:
+        "perspective(500px) rotateY(" +
+        posX * 0.02 +
+        "deg) rotateX(" +
+        posY * -0.02 +
+        "deg)"
+    });
+  };
+
+
   // 여러 이미지 업로드 및 미리보기
   constructor(props) {
     super(props);
@@ -74,25 +108,6 @@ class RegisterOld extends React.Component {
         profile_preview.push(<img style={{maxWidth:'200px'}}  src={element}></img>)
         
       }
-      
-
-        
-    // if(this.state.file.length > 0){
-    //   for (let i = 0; i < this.state.previewURL.length; i++) {
-    //     const element = this.state.previewURL[i];
-    //     profile_preview.push(<img className='profile_preview' src={element}></img>)
-    //   }
-    // }else if (this.state.file.length == 3){
-    //   break;
-    // style={{maxWidth:'200px'}} 
-    // }
-  //   const options = [
-  //     { label: "Grapes 🍇", value: "grapes" },
-  //     { label: "Mango 🥭", value: "mango" },
-  //     { label: "Strawberry 🍓", value: "strawberry" }
-  //   ];
-      
-  // const [selected, setSelected] = useState([]);
       return (
       <>
         <ExamplesNavbar2/>
@@ -117,7 +132,40 @@ class RegisterOld extends React.Component {
                     Register Page
                   </Button>
                 </div> */}
-
+                <Row>
+                  <Col className="offset-lg-0 offset-md-3" lg="5" md="6">
+                    <div
+                      className="square square-7"
+                      id="square7"
+                      style={{ transform: this.state.squares7and8 }}
+                    />
+                    <div
+                      className="square square-8"
+                      id="square8"
+                      style={{ transform: this.state.squares7and8 }}
+                    />
+                  </Col>
+                </Row>
+                { <div
+                  className="square square-3"
+                  id="square3"
+                  style={{ transform: this.state.squares1to6 }}
+                />}
+                <div
+                  className="square square-4"
+                  id="square4"
+                  style={{ transform: this.state.squares1to6 }}
+                />
+                <div
+                  className="square square-5"
+                  id="square5"
+                  style={{ transform: this.state.squares1to6 }}
+                />
+                <div
+                  className="square square-6"
+                  id="square6"
+                  style={{ transform: this.state.squares1to6 }}
+                />
 
                 <Card className="card-register">
                   <CardHeader>
@@ -157,27 +205,27 @@ class RegisterOld extends React.Component {
                           extensions={['.mp4']} >
                           <div className="dropbox-button">Click me!</div>        
                       </DropboxChooser> */}
-<Row>
-    <Col>
-    <div>
-    <br/>
+                      <Row>
+                          <Col>
+                          <div>
+                          <br/>
 
-    </div>
-    </Col>
-</Row>
+                          </div>
+                          </Col>
+                      </Row>
 
-<div>
-<select>
-<option selected value="TokenBox">TokenBox &nbsp;&nbsp; </option>
-  <option value="Nike">Nike</option>
-  <option value="Gucci">Gucci</option>
-  <option value="Rolex">Rolex</option>
-  <option value="PRADA">PRADA</option>
-</select>
-<br/>
-</div>
-<br/>
-                 
+                      <div>
+                      <select>
+                      <option selected value="TokenBox">TokenBox &nbsp;&nbsp; </option>
+                        <option value="Nike">Nike</option>
+                        <option value="Gucci">Gucci</option>
+                        <option value="Rolex">Rolex</option>
+                        <option value="PRADA">PRADA</option>
+                      </select>
+                      <br/>
+                      </div>
+                      <br/>
+                                      
                       <Input
                             placeholder="price"
                             type="text"
