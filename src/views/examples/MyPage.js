@@ -30,12 +30,39 @@ import { Link } from "react-router-dom";
 
 
 class Mypage extends React.Component {
+  state = {
+    squares1to6: "",
+    squares7and8: ""
+  };
   componentDidMount() {
-    document.body.classList.toggle("my-page");
+    document.body.classList.toggle("register-page");
+    document.documentElement.addEventListener("mousemove", this.followCursor);
   }
   componentWillUnmount() {
-    document.body.classList.toggle("my-page");
+    document.body.classList.toggle("register-page");
+    document.documentElement.removeEventListener(
+      "mousemove",
+      this.followCursor
+    );
   }
+  followCursor = event => {
+    let posX = event.clientX - window.innerWidth / 2;
+    let posY = event.clientY - window.innerWidth / 6;
+    this.setState({
+      squares1to6:
+        "perspective(500px) rotateY(" +
+        posX * 0.05 +
+        "deg) rotateX(" +
+        posY * -0.05 +
+        "deg)",
+      squares7and8:
+        "perspective(500px) rotateY(" +
+        posX * 0.02 +
+        "deg) rotateX(" +
+        posY * -0.02 +
+        "deg)"
+    });
+  };
 
   constructor(props) {
     super(props);
@@ -61,46 +88,61 @@ class Mypage extends React.Component {
   }
   state = {};
   render() {
-    
     return (
-
       <>
-       <MypageNavbar />
-           {/* <img
-              alt="..."
-              className="path"
-              src={require("assets/img/blob.png")}
-            />
-
-            <img
-              alt="..."
-              className="shapes circle"
-              src={require("assets/img/cercuri.png")}
-            /> */}
-       
-       <div className="wrapper">
-           <div className="section">
-               <div className="container">
-                   <Row>
-                   <Col className="col-md-3">
+       <MypageNavbar />       
+        <div className="wrapper">
+          <div className="section">
+             <div className="container">
+                  <Col className="offset-lg-0 offset-md-3" lg="5" md="6">
+                    <div
+                      className="square square-7"
+                      id="square7"
+                      style={{ transform: this.state.squares7and8 }}
+                    />
+                    <div
+                      className="square square-8"
+                      id="square8"
+                      style={{ transform: this.state.squares7and8 }}
+                    />
+                  </Col>
+                    <div
+                      className="square square-3"
+                      id="square3"
+                      style={{ transform: this.state.squares1to6 }}
+                    />
+                    <div
+                      className="square square-4"
+                      id="square4"
+                      style={{ transform: this.state.squares1to6 }}
+                    />
+                    <div
+                      className="square square-5"
+                      id="square5"
+                      style={{ transform: this.state.squares1to6 }}
+                    />
+                    <div
+                      className="square square-6"
+                      id="square6"
+                      style={{ transform: this.state.squares1to6 }}
+                    />
+                    
+                <Row>
+                  <Col className="col-md-3">
                     <div className="section">
                         <section className="text-center">
-                            <div className="fileinput text-center">
-                                {/* <input type="file" accept='image/jpg,impge/png,image/jpeg,image/gif' 
-                                  name='profile_img' onChange={this.handleFileOnChange}/> */}
-                               
+                          <div className="fileinput text-center">
                             <div className="thumbnail img-circle">
                             <img src={this.state.image} alt="..."></img>
                             </div>
-                            <div>
+                          <div>
                             <label type="button" for="ex_file" className="btn-round btn btn-default">
                               
                               Add Photo
                               <input type="file" id="ex_file" style={{width:"0px",}} accept='image/jpg,impge/png,image/jpeg,image/gif' 
                                   onChange={this.handleFileOnChange}/>
                             </label>
-                                 
-                            </div>
+                          </div>
                             </div>
                             <h3 className="title">Charlie Bailey</h3>
                         </section>
@@ -144,7 +186,7 @@ class Mypage extends React.Component {
                         <br/><br/><br/>
                         <section>
                           <div className="progress-container progress-info">
-                            <span className="progress-badge">프로필 수정을 완료해주세요</span>
+                            <span className="progress-badge">Cryptoberry에 오신 것을 환영합니다.</span>
                           </div>
                           <div className="progress">
                             <div className="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
@@ -164,272 +206,71 @@ class Mypage extends React.Component {
                           <div>
                             <header>
                               <h2 className="text-uppercase">General information</h2>
-
                             </header>
                             <hr className="line-info"/>
                             <br/>
 
+                            {/* 주소 계정 포함 */}
                             <Row>
                               <Col className="align-self-center col-md-3">
-                                <label className="labels" for="#firstName">First Name</label>
+                                <label className="labels" for="#firstName">User Address</label>
                               </Col>
                               <Col className="align-self-center col-md-8">
                                 <div className="form=group">
-                                  <input id="firstName" name="firstName" type="text" className="form-control" placeholder="Charlie">
-
-                                  </input>
+                                  <input id="firstName" name="firstName" type="text" className="form-control" 
+                                  placeholder="ex)0xd193b5de228c31324e330e1e67cd4afa228539de"/>
+                                  or<br/>
+                                  
+                                  <input type="file" id="ex_file" style={{width:"0px",}} accept='image/jpg,impge/png,image/jpeg,image/gif' 
+                                  onChange={this.handleFileOnChange}/>
                                 </div>
                               </Col>
-                              </Row>
-                              <br/>
-                           
-
-                           <Row>
-                              <Col className="align-self-center col-md-3">
-                                <label className="labels" for="#lastName">Last Name</label>
-                                </Col>
-                                <Col className="align-self-center col-md-8">
-                                <div className="form=group">
-                                  <input id="lastName" name="lastName" type="text" className="form-control" placeholder="Bailey"></input>
-                                </div>
-                              </Col>
-                              </Row>
-                              <br/>
+                            </Row>
 
                             <Row>
                               <Col className="align-self-center col-md-3">
-                                <label className="labels">
-                                  성별
-                                </label>
+                                <label className="labels" for="#firstName">갖고 있는 토큰</label>
                               </Col>
-
-                              <Col className="align-self-center col-md-4">
-                                <div className="form-group">
-
-
-                                <select>
-                                <option seleted value="Gender">Gender</option>
-                                <option value="male">male</option>
-                                <option value="female">female</option>
-                                
-                                </select>
-
-                              
-                              
-
-                                  {/* <div className="react-select react-select-info css-2b097c-container">
-                                    <div className="react-select__control css-yk16xz-control">
-                                    <div className="react-select__value-container css-1hwfw3">
-                                      <div className="react-select__placeholder css-1wa3eu0-placeholder">Gender</div>
-
-                                    <div className="css-1g6gooi">
-                                      <div className="react-select__input" style={{display: "inline-blcok"}}>
-
-                                      <input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-2-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" 
-                                      style={{boxSizing: "content-box",width: "2px",background: "0px center",border: "0px",fontSize: "inherit",opacity: "1",outline: "0px" ,padding: "0px" ,color: "inherit"}}></input>
-                                    
-                                    <div style={{position: "absolute",
-                            top: "0px",
-                            left: "0px",
-                            visibility: "hidden",
-                            height: "0px",
-                            overflow: "scroll",
-                            whiteSpace: "pre",
-                            fontSize: "14px",
-                            fontFamily: "Poppins, sans-serif",
-                            fontWeight: "400",
-                            fontStyle: "normal",
-                            letterSpacing: "normal",
-                            textTransform: "none"}}></div>
-
-
-                                      </div>
-                                    </div>
-
-                                    </div>
-
-                                    <div className="react-select__indicators css-1wy0on6">
-
-                                    </div>
-
-                                    </div>
-                                  </div> */}
-
+                              <Col className="align-self-center col-md-8">
+                                <div className="form=group">
                                   
-                                 </div>
+                                </div>
                               </Col>
-                              </Row>
+                            </Row>
                               <br/>
 
 
-                              <Row>
-                              <Col className="align-self-center col-md-3">
-                                <label className="labels">
-                                  Birth Date
-                                </label>
-                              </Col>
-
-                          
-                              <div className="align-self-center col-md-8">
-                                      <div className="form-group">
-                                        <input placeholder="YYYY-MM-DD"
-                                        type="text" class="form-control"/>
-                                      </div>
-                                    </div>
-                                   </Row>
-                                   <br/>
-                              
-                                   <Row>
-                              <Col className="align-self-center col-md-3">
-                                <label className="labels">
-                                  Email
-                                </label>
-                              </Col>
-
-                          
-                              <div className="align-self-center col-md-8">
-                                      <div className="form-group">
-                                        <input placeholder="charile.bailey@gmail.com"
-                                        type="text" class="form-control"/>
-                                      </div>
-                                    </div>
-
-                                   </Row>
-                                   <br/>
-
-                                   <Row>
-                              <Col className="align-self-center col-md-3">
-                                <label className="labels">
-                                Confirm Email
-
-                                </label>
-                              </Col>
-
-                          
-                              <div className="align-self-center col-md-8">
-                                      <div className="form-group">
-                                        <input placeholder="charile.bailey@gmail.com"
-                                        type="text" class="form-control"/>
-                                      </div>
-                                    </div>
-
-                                   </Row>
-                                   <br/>
-
-                                   <Row>
-                              <Col className="align-self-center col-md-3">
-                                <label className="labels">
-                                your Address
-
-                                </label>
-                              </Col>
-
-                          
-                              <div className="align-self-center col-md-8">
-                                      <div className="form-group">
-                                        <input placeholder="서울특별시 ○○구 ○○동(번지주소 포함해서 적어주세요)"
-                                        type="text" class="form-control"/>
-                                      </div>
-                                    </div>
-
-                                   </Row>
-                                   <br/>
-
-                                   <Row>
-                              <Col className="align-self-center col-md-3">
-                                <label className="labels">
-                                Phone Number
-
-                                </label>
-                              </Col>
-
-                          
-                              <div className="align-self-center col-md-8">
-                                      <div className="form-group">
-                                        <input placeholder="010-****-****(-포함)"
-                                        type="text" class="form-control"/>
-                                      </div>
-                                    </div>
-
-                                   </Row>
-                                   <br/>
-
-                                   <Row>
-                              <Col className="align-self-center col-md-3">
-                                <label className="labels">
-                                Country
-
-                                </label>
-                              </Col>
-
-                          
-                              <div className="align-self-center col-md-8">
-                                      <div className="form-group">
-                                        <input placeholder="Korea republic of"
-                                        type="text" class="form-control"/>
-                                      </div>
-                                    </div>
-
-                                   </Row>
-                                   <br/>
-
-                        <Row>
-
-
-                          <Col className="col-md-9">
-
-                          <div>
-                            <Link to="Landing-page"> 
-                          <button type="button" class="btn btn-info" style={{float: 'right'}}>Save Changes</button>
-                          </Link>
-                          </div>
-                                  
-                            {/* <div>    
-                            <Link to="components"> 
-                          <button type="button" class="btn-simple ml-1 btn btn-info" style={{float: 'right'}}>Cancel</button>
-                          </Link>
-                          </div> */}
-                          </Col>
-
-                          <div>    
-                            <Link to="components"> 
-                          <button type="button" class="btn-simple ml-1 btn btn-info" style={{float: 'right'}}>Cancel</button>
-                          </Link>
-                          </div> 
-
-                          
-
-    
-                          
-                        </Row>
-                              
-
-                                
 
 
 
-
-                           
+                            <br/>
                             
-                    
-                        
-                            
+                            <Row>
+                              <Col className="col-md-9">
+                                <div>
+                                  <Link to="Landing-page"> 
+                                <button type="button" class="btn btn-info" style={{float: 'right'}}>Save Changes</button>
+                                </Link>
+                                </div>
+                              </Col>
+
+                              <div>    
+                                <Link to="components"> 
+                                <button type="button" class="btn-simple ml-1 btn btn-info" style={{float: 'right'}}>Cancel</button>
+                                </Link>
+                              </div>                           
+                            </Row>       
+
                           </div>
                         </div>
                       </div>
                     </div>
                   </Col>
-                   </Row>
-               </div>
-           </div>
-
-       </div>
-
-
-         
-
-             
-          <Footer />
+                </Row>
+              </div>
+          </div>
+        </div>
+       <Footer />
         
         
       </>
