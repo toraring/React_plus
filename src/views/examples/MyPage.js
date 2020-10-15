@@ -219,32 +219,328 @@ class Mypage extends React.Component {
                                 <div className="form=group">
                                   <input id="firstName" name="firstName" type="text" className="form-control" 
                                   placeholder="ex)0xd193b5de228c31324e330e1e67cd4afa228539de"/>
-                                  or<br/>
-                                  
+                                  {/* or<br/>                                  
                                   <input type="file" id="ex_file" style={{width:"0px",}} accept='image/jpg,impge/png,image/jpeg,image/gif' 
-                                  onChange={this.handleFileOnChange}/>
+                                  onChange={this.handleFileOnChange}/> */}
                                 </div>
                               </Col>
                             </Row>
+                            <br/>
 
-                            <Row>
-                              <Col className="align-self-center col-md-3">
+                            {/* 갖고있는 토큰 */}
+                            <Row>            
+                              <Col className="align-self-center col-md-3" >
                                 <label className="labels" for="#firstName">갖고 있는 토큰</label>
                               </Col>
-                              <Col className="align-self-center col-md-8">
-                                <div className="form=group">
-                                  
-                                </div>
+                            </Row>
+                            <Col className="align-self-center row-md-3" >
+                              <Card className="card-coin card-plain"
+                               style={{display: '', paddingLeft: '30px', width: '600px', overflowX:'scroll'}}>
+                                <br/> 
+                                <Row>
+                                  {/* 첫번째 토큰 */}                              
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/bitcoin.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Light Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                          <ListGroup>
+                                            Product<ListGroupItem>Shose</ListGroupItem>
+                                            Brand<ListGroupItem>Nike</ListGroupItem>                                            
+                                          </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                  {/* 두번째 토큰 */}
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/ripp.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Blight Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                        <ListGroup>
+                                            Product<ListGroupItem>Bag</ListGroupItem>
+                                            Brand<ListGroupItem>Gucci</ListGroupItem>                                            
+                                        </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                  {/* 세번째 토큰 */}      
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/etherum.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Dark Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                          <ListGroup>
+                                              Product<ListGroupItem>Cloth</ListGroupItem>
+                                              Brand<ListGroupItem>Tome Browne</ListGroupItem>                                            
+                                          </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                  {/* 네번째 토큰 */}    
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/bitcoin.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Light Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                          <ListGroup>
+                                              Product<ListGroupItem>Bag</ListGroupItem>
+                                              Brand<ListGroupItem>Lacoste</ListGroupItem>                                            
+                                          </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                </Row>
+                              </Card>
+                            </Col>
+
+                            {/* 판매중인 토큰 */}
+                            <Row>            
+                              <Col className="align-self-center col-md-3" >
+                                <label className="labels" for="#firstName">판매중인 토큰</label>
                               </Col>
                             </Row>
-                              <br/>
+                            <Col className="align-self-center row-md-3" >
+                              <Card className="card-coin card-plain"
+                               style={{display: '',  paddingLeft: '30px', width: '600px', overflowX:'scroll'}}>
+                                <br/> 
+                                <Row>
+                                  {/* 첫번째 토큰 */}                              
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/bitcoin.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Light Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                          <ListGroup>
+                                            Product<ListGroupItem>Shose</ListGroupItem>
+                                            Brand<ListGroupItem>Nike</ListGroupItem>                                            
+                                          </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                  {/* 두번째 토큰 */}
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/ripp.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Blight Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                        <ListGroup>
+                                            Product<ListGroupItem>Bag</ListGroupItem>
+                                            Brand<ListGroupItem>Gucci</ListGroupItem>                                            
+                                        </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                  {/* 세번째 토큰 */}      
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/etherum.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Dark Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                          <ListGroup>
+                                              Product<ListGroupItem>Cloth</ListGroupItem>
+                                              Brand<ListGroupItem>Tome Browne</ListGroupItem>                                            
+                                          </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                  {/* 네번째 토큰 */}    
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/bitcoin.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Light Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                          <ListGroup>
+                                              Product<ListGroupItem>Bag</ListGroupItem>
+                                              Brand<ListGroupItem>Lacoste</ListGroupItem>                                            
+                                          </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                </Row>
+                              </Card>
+                            </Col>
 
-
-
+                            {/* 판매 완료된 토큰 */}
+                            <Row>            
+                              <Col className="align-self-center col-md-3" >
+                                <label className="labels" for="#firstName">판매 완료된 토큰</label>
+                              </Col>
+                            </Row>
+                            <Col className="align-self-center row-md-3" >
+                              <Card className="card-coin card-plain"
+                               style={{display: '', paddingLeft: '30px', width: '600px', overflowX:'scroll'}}>
+                                <br/> 
+                                <Row>
+                                  {/* 첫번째 토큰 */}                              
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/bitcoin.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Light Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                          <ListGroup>
+                                            Product<ListGroupItem>Shose</ListGroupItem>
+                                            Brand<ListGroupItem>Nike</ListGroupItem>                                            
+                                          </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                  {/* 두번째 토큰 */}
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/ripp.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Blight Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                        <ListGroup>
+                                            Product<ListGroupItem>Bag</ListGroupItem>
+                                            Brand<ListGroupItem>Gucci</ListGroupItem>                                            
+                                        </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                  {/* 세번째 토큰 */}      
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/etherum.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Dark Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                          <ListGroup>
+                                              Product<ListGroupItem>Cloth</ListGroupItem>
+                                              Brand<ListGroupItem>Tome Browne</ListGroupItem>                                            
+                                          </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                  {/* 네번째 토큰 */}    
+                                  <Col>
+                                    <Card className="card-coin card-plain">                                  
+                                        <img
+                                          alt="..."
+                                          className="img-center img-fluid"
+                                          src={require("assets/img/bitcoin.png")}
+                                        />                                                                
+                                        <Row>
+                                          <Col className="text-center" md="12">
+                                            <h4 className="text-uppercase">Light Coin</h4>
+                                            <hr className="line-primary" />
+                                          </Col>
+                                        </Row>
+                                        <Row>
+                                          <ListGroup>
+                                              Product<ListGroupItem>Bag</ListGroupItem>
+                                              Brand<ListGroupItem>Lacoste</ListGroupItem>                                            
+                                          </ListGroup>
+                                        </Row>
+                                    </Card>
+                                  </Col>
+                                </Row>
+                              </Card>
+                            </Col>
 
 
                             <br/>
-                            
+                            <br/>
+                                                        
+                            {/* 저장버튼 */}
                             <Row>
                               <Col className="col-md-9">
                                 <div>
