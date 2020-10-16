@@ -277,7 +277,7 @@ class Mypage extends React.Component {
                                           <Link to ={'register-page'}>                                              
                                             <h4 className="text-uppercase">
                                               <p color='white'>Blight Coin</p></h4></Link>
-                                            <hr className="line-primary" />
+                                            <hr className="line-info" />
                                           </Col>
                                         </Row>
                                         <Row>
@@ -301,7 +301,7 @@ class Mypage extends React.Component {
                                           <Link to ={'register-page'}>                                              
                                             <h4 className="text-uppercase">
                                               <p color='white'>Dark Coin</p></h4></Link>
-                                            <hr className="line-primary" />
+                                            <hr className="line-sucess" />
                                           </Col>
                                         </Row>
                                         <Row>
@@ -390,7 +390,7 @@ class Mypage extends React.Component {
                                           <Link to ={'register-page'}>                                              
                                             <h4 className="text-uppercase">
                                               <p color='white'>Blight Coin</p></h4></Link>
-                                            <hr className="line-primary" />
+                                            <hr className="line-info" />
                                           </Col>
                                         </Row>
                                         <Row>
@@ -401,54 +401,7 @@ class Mypage extends React.Component {
                                         </Row>
                                     </Card>
                                   </Col>
-                                  {/* 세번째 토큰 */}      
-                                  <Col>
-                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
-                                        <img
-                                          alt="..."
-                                          className="img-center img-fluid"
-                                          src={require("assets/img/etherum.png")}
-                                        />                                                                
-                                        <Row>
-                                          <Col className="text-center" md="12">
-                                          <Link to ={'register-page'}>                                              
-                                            <h4 className="text-uppercase">
-                                              <p color='white'>Dark Coin</p></h4></Link>
-                                            <hr className="line-primary" />
-                                          </Col>
-                                        </Row>
-                                        <Row>
-                                          <ListGroup>
-                                              Product<ListGroupItem>Cloth</ListGroupItem>
-                                              Brand<ListGroupItem>Tome Browne</ListGroupItem>                                            
-                                          </ListGroup>
-                                        </Row>
-                                    </Card>
-                                  </Col>
-                                  {/* 네번째 토큰 */}    
-                                  <Col>
-                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
-                                        <img
-                                          alt="..."
-                                          className="img-center img-fluid"
-                                          src={require("assets/img/bitcoin.png")}
-                                        />                                                                
-                                        <Row>
-                                          <Col className="text-center" md="12">
-                                          <Link to ={'register-page'}>                                              
-                                            <h4 className="text-uppercase">
-                                              <p color='white'>Blight Coin</p></h4></Link>
-                                            <hr className="line-primary" />
-                                          </Col>
-                                        </Row>
-                                        <Row>
-                                          <ListGroup>
-                                              Product<ListGroupItem>Bag</ListGroupItem>
-                                              Brand<ListGroupItem>Lacoste</ListGroupItem>                                            
-                                          </ListGroup>
-                                        </Row>
-                                    </Card>
-                                  </Col>
+                                  
                                 </Row>
                               </Card>
                             </Col>
@@ -503,7 +456,7 @@ class Mypage extends React.Component {
                                           <Link to ={'register-page'}>                                              
                                             <h4 className="text-uppercase">
                                               <p color='white'>Blight Coin</p></h4></Link>
-                                            <hr className="line-primary" />
+                                            <hr className="line-info" />
                                           </Col>
                                         </Row>
                                         <Row>
@@ -514,54 +467,7 @@ class Mypage extends React.Component {
                                         </Row>
                                     </Card>
                                   </Col>
-                                  {/* 세번째 토큰 */}      
-                                  <Col>
-                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
-                                        <img
-                                          alt="..."
-                                          className="img-center img-fluid"
-                                          src={require("assets/img/etherum.png")}
-                                        />                                                                
-                                        <Row>
-                                          <Col className="text-center" md="12">
-                                          <Link to ={'register-page'}>                                              
-                                            <h4 className="text-uppercase">
-                                              <p color='white'>Dark Coin</p></h4></Link>
-                                            <hr className="line-primary" />
-                                          </Col>
-                                        </Row>
-                                        <Row>
-                                          <ListGroup>
-                                              Product<ListGroupItem>Cloth</ListGroupItem>
-                                              Brand<ListGroupItem>Tome Browne</ListGroupItem>                                            
-                                          </ListGroup>
-                                        </Row>
-                                    </Card>
-                                  </Col>
-                                  {/* 네번째 토큰 */}    
-                                  <Col>
-                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
-                                        <img
-                                          alt="..."
-                                          className="img-center img-fluid"
-                                          src={require("assets/img/bitcoin.png")}
-                                        />                                                                
-                                        <Row>
-                                          <Col className="text-center" md="12">
-                                          <Link to ={'register-page'}>                                              
-                                            <h4 className="text-uppercase">
-                                              <p color='white'>Blight Coin</p></h4></Link>
-                                            <hr className="line-primary" />
-                                          </Col>
-                                        </Row>
-                                        <Row>
-                                          <ListGroup>
-                                              Product<ListGroupItem>Bag</ListGroupItem>
-                                              Brand<ListGroupItem>Lacoste</ListGroupItem>                                            
-                                          </ListGroup>
-                                        </Row>
-                                    </Card>
-                                  </Col>
+                                 
                                 </Row>
                               </Card>
                             </Col>
