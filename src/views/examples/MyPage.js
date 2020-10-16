@@ -235,20 +235,24 @@ class Mypage extends React.Component {
                             </Row>
                             <Col className="align-self-center row-md-3" >
                               <Card className="card-coin card-plain"
-                               style={{display: '', paddingLeft: '30px', width: '600px', overflowX:'scroll'}}>
+                               style={{display:'flex', paddingLeft: '20px', width: '600px', overflowX:'scroll', flexwrap: 'nowrap'}}>
                                 <br/> 
                                 <Row>
                                   {/* 첫번째 토큰 */}                              
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
                                           src={require("assets/img/bitcoin.png")}
-                                        />                                                                
+                                        />
+                                                                                                     
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Light Coin</h4>
+                                            <h4 className="text-uppercase" >
+                                              <Link to ={'register-page'}>
+                                                <p color='white'>
+                                                Light Coin</p></Link></h4>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -262,7 +266,7 @@ class Mypage extends React.Component {
                                   </Col>
                                   {/* 두번째 토큰 */}
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
@@ -270,7 +274,9 @@ class Mypage extends React.Component {
                                         />                                                                
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Blight Coin</h4>
+                                          <Link to ={'register-page'}>                                              
+                                            <h4 className="text-uppercase">
+                                              <p color='white'>Blight Coin</p></h4></Link>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -284,7 +290,7 @@ class Mypage extends React.Component {
                                   </Col>
                                   {/* 세번째 토큰 */}      
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
@@ -292,7 +298,9 @@ class Mypage extends React.Component {
                                         />                                                                
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Dark Coin</h4>
+                                          <Link to ={'register-page'}>                                              
+                                            <h4 className="text-uppercase">
+                                              <p color='white'>Dark Coin</p></h4></Link>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -306,7 +314,7 @@ class Mypage extends React.Component {
                                   </Col>
                                   {/* 네번째 토큰 */}    
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
@@ -314,7 +322,9 @@ class Mypage extends React.Component {
                                         />                                                                
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Light Coin</h4>
+                                          <Link to ={'register-page'}>                                              
+                                            <h4 className="text-uppercase">
+                                              <p color='white'>Blight Coin</p></h4></Link>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -338,20 +348,24 @@ class Mypage extends React.Component {
                             </Row>
                             <Col className="align-self-center row-md-3" >
                               <Card className="card-coin card-plain"
-                               style={{display: '',  paddingLeft: '30px', width: '600px', overflowX:'scroll'}}>
+                               style={{display:'flex', paddingLeft: '20px', width: '600px', overflowX:'scroll', flexwrap: 'nowrap'}}>
                                 <br/> 
                                 <Row>
                                   {/* 첫번째 토큰 */}                              
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
                                           src={require("assets/img/bitcoin.png")}
-                                        />                                                                
+                                        />
+                                                                                                     
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Light Coin</h4>
+                                            <h4 className="text-uppercase" >
+                                              <Link to ={'register-page'}>
+                                                <p color='white'>
+                                                Light Coin</p></Link></h4>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -365,7 +379,7 @@ class Mypage extends React.Component {
                                   </Col>
                                   {/* 두번째 토큰 */}
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
@@ -373,7 +387,9 @@ class Mypage extends React.Component {
                                         />                                                                
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Blight Coin</h4>
+                                          <Link to ={'register-page'}>                                              
+                                            <h4 className="text-uppercase">
+                                              <p color='white'>Blight Coin</p></h4></Link>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -387,7 +403,7 @@ class Mypage extends React.Component {
                                   </Col>
                                   {/* 세번째 토큰 */}      
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
@@ -395,7 +411,9 @@ class Mypage extends React.Component {
                                         />                                                                
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Dark Coin</h4>
+                                          <Link to ={'register-page'}>                                              
+                                            <h4 className="text-uppercase">
+                                              <p color='white'>Dark Coin</p></h4></Link>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -409,7 +427,7 @@ class Mypage extends React.Component {
                                   </Col>
                                   {/* 네번째 토큰 */}    
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
@@ -417,7 +435,9 @@ class Mypage extends React.Component {
                                         />                                                                
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Light Coin</h4>
+                                          <Link to ={'register-page'}>                                              
+                                            <h4 className="text-uppercase">
+                                              <p color='white'>Blight Coin</p></h4></Link>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -432,8 +452,8 @@ class Mypage extends React.Component {
                                 </Row>
                               </Card>
                             </Col>
-
-                            {/* 판매 완료된 토큰 */}
+                            
+                            {/* 판매완료된 토큰 */}
                             <Row>            
                               <Col className="align-self-center col-md-3" >
                                 <label className="labels" for="#firstName">판매 완료된 토큰</label>
@@ -441,20 +461,24 @@ class Mypage extends React.Component {
                             </Row>
                             <Col className="align-self-center row-md-3" >
                               <Card className="card-coin card-plain"
-                               style={{display: '', paddingLeft: '30px', width: '600px', overflowX:'scroll'}}>
+                               style={{display:'flex', paddingLeft: '20px', width: '600px', overflowX:'scroll', flexwrap: 'nowrap'}}>
                                 <br/> 
                                 <Row>
                                   {/* 첫번째 토큰 */}                              
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
                                           src={require("assets/img/bitcoin.png")}
-                                        />                                                                
+                                        />
+                                                                                                     
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Light Coin</h4>
+                                            <h4 className="text-uppercase" >
+                                              <Link to ={'register-page'}>
+                                                <p color='white'>
+                                                Light Coin</p></Link></h4>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -468,7 +492,7 @@ class Mypage extends React.Component {
                                   </Col>
                                   {/* 두번째 토큰 */}
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
@@ -476,7 +500,9 @@ class Mypage extends React.Component {
                                         />                                                                
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Blight Coin</h4>
+                                          <Link to ={'register-page'}>                                              
+                                            <h4 className="text-uppercase">
+                                              <p color='white'>Blight Coin</p></h4></Link>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -490,7 +516,7 @@ class Mypage extends React.Component {
                                   </Col>
                                   {/* 세번째 토큰 */}      
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
@@ -498,7 +524,9 @@ class Mypage extends React.Component {
                                         />                                                                
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Dark Coin</h4>
+                                          <Link to ={'register-page'}>                                              
+                                            <h4 className="text-uppercase">
+                                              <p color='white'>Dark Coin</p></h4></Link>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -512,7 +540,7 @@ class Mypage extends React.Component {
                                   </Col>
                                   {/* 네번째 토큰 */}    
                                   <Col>
-                                    <Card className="card-coin card-plain">                                  
+                                    <Card className="card-coin card-plain" style={{width: '230px'}}>                                  
                                         <img
                                           alt="..."
                                           className="img-center img-fluid"
@@ -520,7 +548,9 @@ class Mypage extends React.Component {
                                         />                                                                
                                         <Row>
                                           <Col className="text-center" md="12">
-                                            <h4 className="text-uppercase">Light Coin</h4>
+                                          <Link to ={'register-page'}>                                              
+                                            <h4 className="text-uppercase">
+                                              <p color='white'>Blight Coin</p></h4></Link>
                                             <hr className="line-primary" />
                                           </Col>
                                         </Row>
@@ -535,8 +565,7 @@ class Mypage extends React.Component {
                                 </Row>
                               </Card>
                             </Col>
-
-
+                            
                             <br/>
                             <br/>
                                                         
